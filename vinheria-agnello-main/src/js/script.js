@@ -16,13 +16,12 @@ if (tipoDeVinho == "") {
     var tipoDeVinho = prompt("Insira o tipo de vinho: tinto, branco ou rosé")
 }
 //Caso o usuário não insira um dos três tipos de vinho, solicite novamente.
-else if (tipoDeVinho != "tinto" || tipoDeVinho != "branco"|| tipoDeVinho != "rosé"|| tipoDeVinho != "Tinto"|| tipoDeVinho || "Branco"|| tipoDeVinho != "Rosé" ){
+else if (tipoDeVinho != "tinto" && tipoDeVinho != "branco" && tipoDeVinho != "rosé" && tipoDeVinho != "Tinto" && tipoDeVinho != "Branco" && tipoDeVinho != "Rosé" ){
     alert("Tipo não encontrado. Insira um tipo válido.")
     var tipoDeVinho = prompt("Insira o tipo de vinho: tinto, branco ou rosé")
 //Cadastrando o tipo de vinho no console.
 }
 console.log("Tipo de vinho:", tipoDeVinho)
-
 
 //ADICIONANDO A VAR. DA SAFRA
 var safraAno = prompt("Qual a safra do vinho?");
@@ -36,28 +35,28 @@ console.log(estoque);
 if (estoque < 5){
     //ADICIONANDO A INFORMAÇÃO QUE O ESTOQUE ESTÁ BAIXO NO CONSOLE
     console.log("ESTOQUE BAIXO");
-    //ADICIONANDO IF PARA CASO A SAFRA SEJA DE 2020 PARA CIMA E CONDIÇÃO PARA SABER SE O VINHO É JOVEM
-    if (safraAno >= 2020){ 
-        var vj = 'Vinho jovem';
-        //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
-        alert("A seguir, veja as informações no console.");
-        //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
-        console.log(`-${safraAno}\n- ${estoque}\n-${vj}`);
-    }
-    //ADICIONANDO ELSE IF PARA CASO A SAFRA SEJA DE 2015 A 2019 E CONDIÇÃO PARA SABER SE O VINHO É AMADURECIDO
-    else if (safraAno >= 2015){
-        var vm = 'Vinho Amadurecido';
-        //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
-        alert("A seguir, veja as informações no console.");
-        //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
-        console.log(`-${safraAno}\n-${estoque}\n-${vm}`);
-    }
-    //ADICIONANDO ELSE IF PARA CASO A SAFRA SEJA MENOR QUE 2015 E CONDIÇÃO PARA SABER SE O VINHO É ANTIGO
-    else if (safraAno < 2015){
-        var va = 'Vinho Antigo';
-        //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
-        alert("A seguir, veja as informações no console.");
-        //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
-        console.log(`-${safraAno}\n-${estoque}\n-${va}`);
-    }
-} 
+}
+//ADICIONANDO IF PARA CASO A SAFRA SEJA DE 2020 PARA CIMA E CONDIÇÃO PARA SABER SE O VINHO É JOVEM
+if (safraAno >= 2020){ 
+    var vj = 'Vinho jovem';
+    //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
+    alert("A seguir, veja as informações no console.");
+    //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
+    console.log(`-Nome: ${nomeDoVinho}\n-Tipo: ${tipoDeVinho}\n-Safra: ${safraAno}\n-Estoque: ${estoque}\n-Idade: ${va}`);
+}
+//ADICIONANDO ELSE IF PARA CASO A SAFRA SEJA DE 2015 A 2019 E CONDIÇÃO PARA SABER SE O VINHO É AMADURECIDO
+else if (safraAno >= 2015){
+    var vm = 'Vinho Amadurecido';
+    //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
+    alert("A seguir, veja as informações no console.");
+    //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
+    console.log(`-Nome: ${nomeDoVinho}\n-Tipo: ${tipoDeVinho}\n-Safra: ${safraAno}\n-Estoque: ${estoque}\n-Idade: ${va}`);
+}
+//ADICIONANDO ELSE IF PARA CASO A SAFRA SEJA MENOR QUE 2015 E CONDIÇÃO PARA SABER SE O VINHO É ANTIGO
+else if (safraAno < 2015){
+    var va = 'Vinho Antigo';
+    //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
+    alert("A seguir, veja as informações no console.");
+    //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
+    console.log(`-Nome: ${nomeDoVinho}\n-Tipo: ${tipoDeVinho}\n-Safra: ${safraAno}\n-Estoque: ${estoque}\n-Idade: ${va}`);
+}
