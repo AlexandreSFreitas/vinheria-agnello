@@ -32,3 +32,32 @@ console.log(safraAno);
 var estoque = prompt("Quantidade no estoque?");
 //ADICIONANDO A INFORMAÇÃO DA VAR. NO CONSOLE
 console.log(estoque);
+//ADICIONANDO A CONDIÇÃO IF CASO O ESTOQUE SEJA MENOR QUE 5
+if (estoque < 5){
+    //ADICIONANDO A INFORMAÇÃO QUE O ESTOQUE ESTÁ BAIXO NO CONSOLE
+    console.log("ESTOQUE BAIXO");
+    //ADICIONANDO IF PARA CASO A SAFRA SEJA DE 2020 PARA CIMA E CONDIÇÃO PARA SABER SE O VINHO É JOVEM
+    if (safraAno >= 2020){ 
+        var vj = 'Vinho jovem';
+        //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
+        alert("A seguir, veja as informações no console.");
+        //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
+        console.log(`-${safraAno}\n- ${estoque}\n-${vj}`);
+    }
+    //ADICIONANDO ELSE IF PARA CASO A SAFRA SEJA DE 2015 A 2019 E CONDIÇÃO PARA SABER SE O VINHO É AMADURECIDO
+    else if (safraAno >= 2015){
+        var vm = 'Vinho Amadurecido';
+        //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
+        alert("A seguir, veja as informações no console.");
+        //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
+        console.log(`-${safraAno}\n-${estoque}\n-${vm}`);
+    }
+    //ADICIONANDO ELSE IF PARA CASO A SAFRA SEJA MENOR QUE 2015 E CONDIÇÃO PARA SABER SE O VINHO É ANTIGO
+    else if (safraAno < 2015){
+        var va = 'Vinho Antigo';
+        //ALERT PARA VER AS INFORMAÇÕES DO VINHO NO CONSOLE
+        alert("A seguir, veja as informações no console.");
+        //ADICIONANDO AS INFORMAÇÕES DO VINHO NO CONSOLE
+        console.log(`-${safraAno}\n-${estoque}\n-${va}`);
+    }
+} 
