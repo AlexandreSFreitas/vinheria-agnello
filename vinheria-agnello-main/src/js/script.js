@@ -22,3 +22,13 @@ else if (tipoDeVinho != "tinto" || tipoDeVinho != "branco"|| tipoDeVinho != "ros
 //Cadastrando o tipo de vinho no console.
 }
 console.log("Tipo de vinho:", tipoDeVinho)
+
+
+//ADICIONANDO A VAR. DA SAFRA
+var safraAno = prompt("Qual a safra do vinho?");
+//ADICIONANDO A INFORMAÇÃO DA VAR. NO CONSOLE
+console.log(safraAno);
+//ADICIONANDO A VAR. DO ESTOQUE
+var estoque = prompt("Quantidade no estoque?");
+//ADICIONANDO A INFORMAÇÃO DA VAR. NO CONSOLE
+console.log(estoque);
